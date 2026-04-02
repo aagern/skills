@@ -126,7 +126,7 @@ mod tests {
 
 Load the relevant methodology files. Use `quick-reference.md` first for targeted ripgrep patterns, then load specific files as needed.
 
-All files at: `/Users/alex/scripts/RUST/RustManifest/code-review-methodology/en/`
+All files at: `/methodology_files/` in the folder with skill:
 
 | File | Size | Use for |
 |---|---|---|
