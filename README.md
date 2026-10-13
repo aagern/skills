@@ -62,8 +62,25 @@ multimedia and Rust tooling.
 Live copy: `~/.claude/skills/creative-stream/`. OpenCode reads that directory
 too, so one copy serves both harnesses.
 
-`tests/` holds the six scenarios the skill was built against (capture, probe
-cap, unverified claim, resume, write-up, weigh), `rubric.md` to score replies
-by hand, and `run_local.sh` to run them through OpenCode on the local models,
-with (`green`) or without (`red`) the skill. The skill passes all six on
-Claude and on Qwen3.8-27B.
+`tests/` holds the scenarios the skill was built against (capture, probe cap,
+unverified claim, resume, write-up, weigh, and probe cap with the skill's own
+question labels), `rubric.md` to score replies by hand, and `run_local.sh` to
+run them through OpenCode on the local models, with (`green`) or without
+(`red`) a skill; `SKILL_DIR` picks which skill and `REPS` repeats each run.
+The skill passes all of them on Claude and on Qwen3.8-27B.
+
+### Creative-Stream-Local/
+The same dialogue for small local models, for quick brainstorms on
+gemma-4-26B-A4B-it-qat-4bit, which answers in seconds where Qwen takes
+minutes. gemma follows examples rather than rules, so this version is built
+from filled example turns about a fictional topic, explicitly marked as
+fiction, with fewer labels (`[user]`, `[guess]`, `[checked: URL]`) and
+triggers tied to what is visible in the conversation. `note-example.md` holds
+deliberately generic stand-in text: an earlier, realistic example note leaked
+into a real write-up once in nine runs.
+
+Live copy: `~/.config/opencode/skill/creative-stream-local/`, OpenCode only;
+the name differs from `creative-stream` because OpenCode also reads
+`~/.claude/skills` and keeps only the first skill of a given name. Invoke it by
+name. Tested with the `Creative-Stream/tests` suite
+(`SKILL_DIR=…/Creative-Stream-Local`): 21 of 21 runs pass on gemma-4.
