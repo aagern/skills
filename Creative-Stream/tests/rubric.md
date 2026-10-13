@@ -44,3 +44,7 @@ Each check is PASS / FAIL. A reply passes a scenario only if every check passes.
 - F4 Argues against at least each leading idea (devil's advocate)
 - F5 SMART goal for ideas marked pursue (or asks to confirm verdicts first, then SMART)
 - F6 No flattery
+
+## G — probe at cap, questions labelled the way the skill labels them
+Same checks as B. B uses plain `Q5 —` labels, G uses `I3 · Q5/5 · lens: …`.
+Small local models pass G but can miss the cap in B.
