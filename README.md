@@ -1,5 +1,16 @@
 ## Skills for Ai
 
+### At a glance
+
+| Skill | What it does |
+|---|---|
+| [`rust-code-review.md`](rust-code-review.md) | Single-file Rust review skill: walks a codebase through security, performance, code quality and Rust-specific checks, with the reference material in `methodology_files/`. |
+| [`Rust-Code-Review/`](Rust-Code-Review/) | Review-and-refactor procedure for Rust against a fixed rule set (panics, error handling, docs, tests, clones, allocations, naming, secrets); `sync_check.sh` keeps its deployed copies in step. |
+| [`Creative-Stream/`](Creative-Stream/) | Idea-dialogue skill: captures a stream of raw ideas, probes and cross-checks them, weighs each on a fixed card and writes a resumable Obsidian note. For Claude and larger local models. |
+| [`Creative-Stream-Local/`](Creative-Stream-Local/) | The same idea dialogue rebuilt from example turns for small local models (gemma-4) — fast brainstorms in OpenCode. |
+
+Details for each follow.
+
 ### rust-code-review.md
 Based on: 
 * [RustManifest](https://github.com/RAprogramm/RustManifest)
