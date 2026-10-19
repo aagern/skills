@@ -21,7 +21,7 @@ REPS="${REPS:-1}"
 LIMIT="${LIMIT:-300}"   # seconds per run; macOS has no timeout(1), perl alarm stands in
 MODE="$1"; OUT="$2"; shift 2
 [ "$#" -eq 0 ] && set -- A B C D E F
-MODELS="${MODELS:-omlx/Qwen3.8-27B-oQ4e-mtp omlx/gemma-4-26B-A4B-it-qat-4bit}"
+MODELS="${MODELS:-omlx/Qwen3.6-35B-A3B-oQ4e-mtp}"
 mkdir -p "$OUT"
 WORK="$(mktemp -d)"   # empty working dir: no project files, no project skills
 
